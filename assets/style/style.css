@@ -1,0 +1,75 @@
+@import "reset.css";
+@import "fonts.css";
+@import "variables.css";
+@import "nav.css";
+@import "header.css";
+@import "films.css";
+@import "trailer.css";
+@import "collection.css";
+@import "series.css";
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+img {
+  user-select: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background: var(--primaryColor);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.primary-btn {
+  padding: 17px 48px;
+  border-radius: 4px;
+  background: var(--orangeColor);
+  transition: 0.5s;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  max-width: max-content;
+}
+
+.primary-btn span {
+  color: var(--blackColor);
+  font-family: var(--rob);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 12px;
+  transition: 0.5s;
+}
+
+.primary-btn:hover {
+  background-color: var(--primaryColor);
+}
+
+.primary-btn:hover span {
+  color: var(--whiteColor);
+}
+
+.primary-section-title {
+  color: var(--orangeColor);
+  font-family: var(--com);
+  font-size: 36px;
+  font-weight: 400;
+  text-transform: capitalize;
+  border-bottom: 1px solid var(--orangeColor);
+  padding-bottom: 10px;
+  max-width: max-content;
+}

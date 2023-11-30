@@ -1,0 +1,112 @@
+.films {
+    padding: 60px 0;
+}
+
+.films__content-items {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 55px;
+}
+
+.films__content-item {
+    position: relative;
+    max-width: max-content;
+    display: flex;
+    justify-content: center;
+}
+
+.films__content-item-content {
+    position: absolute;
+    top: 54px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    z-index: 1;
+}
+
+.films__content-item::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+    background: linear-gradient(180deg, rgba(241, 129, 40, 0.35) 0%, rgba(0, 0, 0, 0.71) 51.04%, rgba(7, 15, 25, 0.80) 100%);
+}
+
+.item-content__descr {
+    max-width: 226px;
+    color: var(--whiteColor);
+    font-family: var(--rob);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+    text-align: justify;
+}
+
+.item-content__time {
+    color: var(--whiteColor);
+
+    font-family: var(--mon);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 10px;
+    padding: 7px 28px;
+    border-radius: 9px;
+    border: 1px solid #FFF;
+    background: rgba(7, 15, 25, 0.20);
+    margin-top: 12px;
+    margin-bottom: 30px;
+}
+
+.item-content__title {
+    color: var(--whiteColor);
+    text-align: center;
+    font-family: var(--mon);
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom: 12px;
+}
+
+@media (max-width:1200px) {
+    .films__content-items {
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+}
+
+@media (max-width:992px) {
+    .films__content-items {
+        justify-content: center;
+    }
+}
+
+.films__content-item {
+    cursor: pointer;
+}
+
+.films__content-item img {
+    transition: .5s;
+}
+
+.films__content-item:hover .films__content-item-content img {
+    transform: scale(1.2);
+}
+
+.item-content__time span {
+    animation-name: time;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes time {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
